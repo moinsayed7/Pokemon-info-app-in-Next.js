@@ -39,13 +39,15 @@ export default async function PokePage(){
         
 
         <Link href={`/pokemon/${ele.name}/` }  key={ele.name}>
-            <div>{ele.name}</div>
+            <div className="bg-black rounded-lg p-4 shadow hover:shadow-lg transition text-center capitalize">
+                <p className="text-white font-bold ">{ele.name}</p>
+            </div>
         </Link>
 
         )
     })
     return (
-        <div>{x}</div>
+        <div className="grid grid-cols-3 gap-4 p-8">{x}</div>
     )
 }
 
